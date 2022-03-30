@@ -50,9 +50,24 @@
     <form>
         <div class="container">
           <label for="category"><b>Select Category</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required>
-      
-          <label for="psw"><b>Password</b></label>
+          <select name "dropdown">
+              <option value ="Animals" selected>Animals</option>
+              <option value ="Coding" selected>Coding</option>
+              <option value ="Geography" selected>Geography</option>
+              <option value ="Music" selected>Music</option>
+              <option value ="Movies" selected>Movies</option>
+              <option value ="PNW" selected>PNW</option>
+          </select>
+          <input type="text" placeholder="Title of Quiz" name="Title" required>
+          <label for="questions"><b>Number of Questions</b></label>
+          <select name "dropdown">
+              <option value ="3" selected>3</option>
+              <option value ="5" selected>5</option>
+              <option value ="10" selected>10</option>
+            </select>
+            <input type="text" placeholder="Question One" name="Question1" required>
+            
+            <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
       
           <button type="submit">Login</button>
