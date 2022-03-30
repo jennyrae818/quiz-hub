@@ -363,7 +363,6 @@ input[type=text], input[type=password] {
 
 /* TAKE QUIZ PAGE */
 
-
 .takequiz-container > div {
   font-family: var(--dosis);
   font-size: 24px;
@@ -373,13 +372,19 @@ input[type=text], input[type=password] {
   background-color: rgba(255, 74, 74, 0.596);
   /*border: 2px solid var(--outline);*/
 }
+.takequiz-container > div > div > label {
+  text-align: left;
+  align-items: left;
+}
 
 
 
 
 
 
-/* QUIZ HOMEPAGE */
+
+
+/* INDIVIDUAL QUIZ HOMEPAGE */
 
 .quizpage-container {
   display: grid;
@@ -399,5 +404,28 @@ input[type=text], input[type=password] {
   /*border: 2px solid var(--outline);*/
 }
 
+
+
+
+
+
+/* USER SCORES PAGE*/
+
+.userscore-container > div {
+  font-family: var(--dosis);
+  font-size: 24px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 50px 0;
+  background-color: rgba(255, 74, 74, 0.596);
+  /*border: 2px solid var(--outline);*/
+}
+
+table {
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+}
 
  
