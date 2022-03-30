@@ -13,21 +13,20 @@
 </head>
 
 <body>
-    <header class="header">
-        <h1><a href=#home>Quiz Hub</a></h1>
+    <header class="home-header">
+        <h1><a href="/homepage">Quiz Hub</a></h1>
         <nav>
             <ul>
                 <li>
-                    <a href="#create">Create Quiz</a>
+                    <a href="#create">Create</a>
                 </li>
                 <li>
-                    <a href="#scores">My Scores</a>
+                    <a href="#scores">Scores</a>
                 </li>
                 <li>
-                    <div class="dropdown">
-                    <button class="dropbtn"><a href=#categories>Categories</a>
+                    <div class="dropdown dropbtn">
+                    <a href=#categories>Categories</a>
                     <i class="fa fa-caret-down"></i>
-                    </button>
                     <div class="dropdown-content">
                         <a href="#animals">Animals</a>
                         <a href="#coding">Coding</a>
@@ -39,31 +38,34 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#logout">Log Out</a>
+                    <a href="#" id="logout">Logout</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-
-    <h2> Click on a ready-made quiz below to get started... </h2>
-
-    <div class="container">
-        <div>Quiz</div>
-        <div>Quiz</div>
-        <div>Quiz</div>
-        <div>Quiz</div>
-        <div>Quiz</div>
-        <div>Quiz</div>
-        <div>Quiz</div>
-        <div>Quiz</div>
-        <div>Quiz</div>
-    
-        
-</main>
-    <footer></footer>
-    
-
-    
+    <main>
+        <h2> Create your very own quiz below &#8595; </h2>
+    <div>
+    <form>
+        <div class="container">
+          <label for="category"><b>Select Category</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+      
+        <div class="container" style="background-color:#f1f1f1">
+          <button class="newuserbtn">New user? Click <u href="#">here</u> to sign up!</button>
+        </div>
+      </form>
+      </div>
+    </main>
 </body>
 </html>
