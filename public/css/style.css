@@ -255,13 +255,6 @@ button:hover {
   color: var(--highlight);
 }
 
-/* Extra style for the cancel button (red) */
-.cancelbtn {
-  font-family: var(--dosis);
-  width: auto;
-  padding: 10px 18px;
-  background-color: var(--highlight);
-}
 
 /* Add padding to containers */
 .container {
@@ -297,6 +290,8 @@ button:hover {
 
 
 
+
+
  /* HIGHSCORES PAGE */
 
 .scorebox ol {
@@ -305,18 +300,18 @@ button:hover {
 
 
 
+
+
 /* CREATE QUIZ PAGE */
-
-}
-
-/* Bordered LOGIN form */
+/* Bordered NEW QUIZ form */
 div.form {
   display: block;
   text-align: center;
 }
 
+
 .quizform {
-  font-family: var(--dosis);
+  font-family: var(--marker);
   border: 3px solid #f1f1f1;
   width: 60%;
   display: inline-block;
@@ -334,6 +329,35 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+}
+
+.newquizbutton {
+  font-family: var(--dosis);
+  font-size: 16px;
+  background-color: var(--header);
+  color: var(--black);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+.newquizbutton:hover {
+  opacity: 0.8;
+  color: var(--highlight);
+}
+
+
+
+
 
 
 
@@ -347,6 +371,31 @@ input[type=text], input[type=password] {
   border-radius: 5px;
   padding: 50px 0;
   background-color: rgba(255, 74, 74, 0.596);
+  /*border: 2px solid var(--outline);*/
+}
+
+
+
+
+
+
+/* QUIZ HOMEPAGE */
+
+.quizpage-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: minmax(150px, auto);
+  gap: 20px;
+}
+
+.quizpage-container > div {
+  font-family: var(--dosis);
+  font-size: 24px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 50px 0;
+  background-color: var(--highlight);
+  opacity: .5;
   /*border: 2px solid var(--outline);*/
 }
 
