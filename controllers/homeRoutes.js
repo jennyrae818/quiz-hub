@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { User, Quiz, Score, Category, Question } = require('../models');
 const withAuth = require('../utils/auth');
 const shuffle = require("shuffle-array");
-const { route } = require('express/lib/application');
 
 router.get("/", withAuth, async (req, res) => {
     try {
@@ -235,6 +234,46 @@ router.get("/results/:quiz_id", async (req, res) => {
     catch (err) {
         console.log(`Error in getting results of a quiz: ${err}`);
         res.status(500).json(err);
+    }
+});
+
+//route to render highscores
+router.get("/highscores", async (req, res) => {
+    try {
+        const allScoreData = await Score.findAll({
+            order: [['total_score', 'DESC']],
+            limit: 5,
+            include: [
+                {
+                    model: User,
+                    attributes: ['username']
+                },
+                {
+                    model: Quiz,
+                    include: [
+                        {
+                            model: Category,
+                            attributes: ['category_name']
+                        }
+                    ],
+                },
+            ],
+        });
+
+        const scores = allScoreData.map(score => score.get({ plain: true }));
+
+        // Gets all categories
+        const categoriesData = await Category.findAll();
+
+        const categories = categoriesData.map(category => category.get({ plain: true }));
+
+        res.render("highscores", {
+            scores,
+            categories,
+            logged_in: req.session.logged_in
+        })
+    } catch (err) {
+        res.status(500).json({ message: "error getting page" });
     }
 });
 

@@ -29,62 +29,18 @@
 
     <h2> My scores &#8595; </h2>
 
-    <div class="homepage-container">
-        <div class="scorebox">Animals
-            <ol>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ol>
+        <div class="homepage-container">
+    {{#each categories as |category|}}
+        <div class="scorebox">{{category_name}}
+        <ol>
+    {{#each ../scores as |score|}}
+            <li>{{quiz.quiz_name}} {{total_score}}</li>
+    {{/each}}
+        </ol>
         </div>
-        <div class="scorebox">Coding
-            <ol>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ol>
+    {{/each}}
         </div>
-        
-        <div class="scorebox">Geography
-            <ol>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ol>
-        </div>
-        <div class="scorebox">Movies
-            <ol>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ol>
-        </div>
-        <div class="scorebox">Music
-            <ol>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ol>
-        </div>
-        <div class="scorebox">PNW
-            <ol>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ol>
-        </div>
+    
        
 </main>
 
