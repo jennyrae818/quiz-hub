@@ -13,7 +13,7 @@ const addMoreQuestion = async (event) => {
 
     if (question && correctAnswer && wrongAnswerA && wrongAnswerB && wrongAnswerC && quiz_id) {
 
-        const response = await fetch('/api/quiz/questions/:quiz_id', {
+        const response = await fetch(`/api/quiz/questions`, {
             method: 'POST',
             body: JSON.stringify({ 
                 question_text: question,
@@ -49,7 +49,7 @@ const submitQuestion = async (event) => {
 
     if (question && correctAnswer && wrongAnswerA && wrongAnswerB && wrongAnswerC && quiz_id) {
 
-        const response = await fetch('/api/quiz/questions/:quiz_id', {
+        const response = await fetch(`/api/quiz/questions`, {
             method: 'POST',
             body: JSON.stringify({ 
                 question_text: question,
