@@ -1,4 +1,4 @@
- <header class="home-header">
+<header class="home-header">
         <h1><a href="/">Quiz Hub</a></h1>
         <nav>
             <ul>
@@ -27,32 +27,13 @@
     </header>
     <main>
 
-    <h2> My Scores &#8595; </h2>
+    <h2 id="categoryname"> {{category.category_name}} </h2>
 
- <div class="userscore-container">
-    <div>
-        {{#each scores as |score|}}
-    
-         <table>
-            <tr>
-            <th><u>Quiz Name</u></th> 
-            <th><u>Your Score</u></th>
-            </tr>
-             {{#each scores as |score|}}
-            <tr>
-            <td>{{quiz.quiz_name}}</td>
-            <td>{{score.total_score}}</td>
-            </tr>
+    <div class="quizpage-container">
+        {{#each category.quizzes as |quiz|}}
+        <div id="quiz1"><a href="/quiz/{{quiz.id}}">{{quiz.quiz_name}}</div></a>
         {{/each}}
-        </table>
     
-       
-        {{/each}}
-        </table>
-    </div>
-        
-        <button id="highscoresbtn">Take me to the high scores!</button>
-
-
 </main>
+
 <script src="/js/logout.js"></script>
