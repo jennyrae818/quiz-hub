@@ -3,7 +3,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/create">Create</a>
+                    <a href="/createQuiz">Create</a>
                 </li>
                 <li>
                     <a href="/scores">Scores</a>
@@ -29,30 +29,27 @@
 
     <h2> My Scores &#8595; </h2>
 
-    <div class="userscore-container">
-        <div>      
-        <table>
-
-        <tr>
-        <th>User Name:</th>
-        <th id="username">lukeskywalker5</th>
-        </tr>
-
-        <th><u>Quiz Name</u></th>
-        <th><u>Score</u></th>
-        </tr>
-
-        <tr>
-            <td id="quizname">Birds of a Feather</td>
-            <td id="quizscore">92%</td>
-        </tr>
-
+ <div class="userscore-container">
+    <div>
+        {{#each scores as |score|}}
+    
+            <table>
+            <tr>
+            <th><u>Quiz Name</u></th> 
+            <th><u>Your Score</u></th>
+            </tr>
+            <tr>
+            <td>{{quiz.quiz_name}}</td>
+            <td>{{score.total_score}}</td>
+            </tr>
+    
+       
+        {{/each}}
         </table>
-        </div>
-        <br>
-        <br>
+    </div>
+        
         <button id="highscoresbtn">Take me to the high scores!</button>
 
-       
+
 </main>
 <script src="/js/logout.js"></script>
