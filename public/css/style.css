@@ -35,6 +35,8 @@ h2 {
 }
 
 
+
+
 /*HOME PAGE*/
 
 /*home header*/
@@ -124,11 +126,6 @@ h2 {
   .dropdown:hover .dropdown-content {
     display: block;
   }
-
-
-
-
-
 
 /*HOMEPAGE GRID */
 .homepage-container {

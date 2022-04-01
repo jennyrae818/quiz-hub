@@ -1,29 +1,26 @@
     <header class="home-header">
-        <h1><a href="/homepage">Quiz Hub</a></h1>
+        <h1><a href="/">Quiz Hub</a></h1>
         <nav>
             <ul>
                 <li>
-                    <a href="#create">Create Quiz</a>
+                    <a href="/create">Create</a>
                 </li>
                 <li>
-                    <a href="#scores">My Scores</a>
+                    <a href="/scores">Scores</a>
                 </li>
                 <li>
                     <div class="dropdown dropbtn">
-                    <a href=#categories>Categories</a>
+                    <a href="#">Categories</a>
                     <i class="fa fa-caret-down"></i>
                     <div class="dropdown-content">
-                        <a href="#animals">Animals</a>
-                        <a href="#coding">Coding</a>
-                        <a href="#geography">Geography</a>
-                        <a href="#movies">Movies</a>
-                        <a href="#music">Music</a>
-                        <a href="#pnw">PNW</a>
+                        {{#each categories as |category|}}
+                        <a href="/category/{{category.id}}">{{category.category_name}}</a>
+                        {{/each}}
                     </div>
                     </div>
                 </li>
                 <li>
-                    <a href="#" id="logout">Log Out</a>
+                    <a href="#" id="logout">Logout</a>
                 </li>
             </ul>
         </nav>
