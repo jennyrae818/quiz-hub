@@ -8,9 +8,7 @@ const addMoreQuestion = async (event) => {
         const wrongAnswerB = document.querySelector('#wrong2').value.trim();
         const wrongAnswerC = document.querySelector('#wrong3').value.trim();
 
-        const quiz_id = window.location.toString().split('/')[
-            window.location.toString().split('/').length -1
-        ];
+        const quiz_id = window.location.toString().split('/').pop()
 
         if (question && correctAnswer && wrongAnswerA && wrongAnswerB && wrongAnswerC && quiz_id) {
 
