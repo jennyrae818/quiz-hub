@@ -31,9 +31,6 @@ To use this application follow the directions below:
 8. To navigate back to the home page click on "Quiz Hub".
 9. When finished click "Logout" to log out of the website.
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
 
 ## Credits
 
